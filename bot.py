@@ -37,7 +37,7 @@ intents.presences = True
 
 
 bot = commands.Bot(
-    command_prefix="?",
+    command_prefix="carlson ",
     description=(
         "Carl Carlson the Second, Son of Carl: "
         + "a Discord bot for the Hawai'i Fridays"
