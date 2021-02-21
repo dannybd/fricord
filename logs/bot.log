@@ -1,0 +1,20 @@
+2021-02-21 04:33:16,103 [25252][discord.client - WARNING] - PyNaCl is not installed, voice will NOT be supported
+2021-02-21 04:33:16,104 [25252][root - INFO] - Loading extensions...
+2021-02-21 04:33:16,105 [25252][root - INFO] - Loading extensions.pin_messages
+2021-02-21 04:33:16,106 [25252][root - INFO] - Loading extensions.toys
+2021-02-21 04:33:16,108 [25252][root - INFO] - Starting!
+2021-02-21 04:33:18,314 [25252][root - INFO] - Connected as carlson#1415 and ready!
+2021-02-21 04:33:43,006 [25252][root - INFO] - Done, closing out
+2021-02-21 04:36:47,245 [25863][discord.client - WARNING] - PyNaCl is not installed, voice will NOT be supported
+2021-02-21 04:36:47,246 [25863][root - INFO] - Loading extensions...
+2021-02-21 04:36:47,246 [25863][root - INFO] - Loading extensions.pin_messages
+2021-02-21 04:36:47,247 [25863][root - INFO] - Loading extensions.toys
+2021-02-21 04:36:47,248 [25863][root - INFO] - Starting!
+2021-02-21 04:36:49,549 [25863][root - INFO] - Connected as carlson#1415 and ready!
+2021-02-21 04:36:55,909 [25863][root - INFO] - Done, closing out
+2021-02-21 04:42:35,217 [26933][discord.client - WARNING] - PyNaCl is not installed, voice will NOT be supported
+2021-02-21 04:42:35,218 [26933][root - INFO] - Loading extensions...
+2021-02-21 04:42:35,218 [26933][root - INFO] - Loading extensions.pin_messages
+2021-02-21 04:42:35,219 [26933][root - INFO] - Loading extensions.toys
+2021-02-21 04:42:35,220 [26933][root - INFO] - Starting!
+2021-02-21 04:42:37,427 [26933][root - INFO] - Connected as carlson#1415 and ready!
