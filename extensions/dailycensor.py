@@ -8,6 +8,7 @@ from common import *
 
 THIN_ICE_ROLES = {
     "dannybd-test": 812918168913182720,
+    "gamescord": 812942511085322271,
     "rttftc": 812925753594871808,
 }
 

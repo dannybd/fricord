@@ -1,5 +1,5 @@
 import configparser
-import discord
+from discord.ext import commands
 
 
 GUILDS = {
@@ -15,6 +15,12 @@ def get_guild_key(guild):
     if guild.id not in INV_GUILDS:
         return None
     return INV_GUILDS[guild.id]
+
+
+def is_in_guilds(*guild_keys):
+    async def predicate(ctx):
+        return get_guild_key(ctx.guild) in guild_keys
+    return commands.check(predicate)
 
 
 config = configparser.ConfigParser()

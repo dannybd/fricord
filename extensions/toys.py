@@ -23,7 +23,7 @@ class Toys(commands.Cog):
             await message.add_reaction("🌅")
             await message.add_reaction("🐢")
             return
-        if re.match("whose dork\??", content):
+        if re.match("whose dork\\??", content):
             await channel.send("our dork!")
             return
 
