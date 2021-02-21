@@ -35,6 +35,10 @@ intents = discord.Intents.default()
 intents.members = True
 intents.presences = True
 
+default_help = commands.DefaultHelpCommand(
+    no_category="Other Commands",
+)
+
 
 bot = commands.Bot(
     command_prefix="carlson ",
@@ -42,6 +46,7 @@ bot = commands.Bot(
         "Carl Carlson the Second, Son of Carl: "
         + "a Discord bot for the Hawai'i Fridays"
     ),
+    help_command=default_help,
     intents=intents,
 )
 
