@@ -20,6 +20,7 @@ def get_guild_key(guild):
 def is_in_guilds(*guild_keys):
     async def predicate(ctx):
         return get_guild_key(ctx.guild) in guild_keys
+
     return commands.check(predicate)
 
 

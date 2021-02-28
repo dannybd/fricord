@@ -17,6 +17,7 @@ UNBANNABLE_ROLES = {
     "dannybd-test": 812918168913182720,
 }
 
+
 class Please(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -44,7 +45,9 @@ class Please(commands.Cog):
             await ctx.send("This isn't supported here.")
             return
         if not member:
-            await ctx.send("Gotta tell me who you want to ban. " + "Try @ mentioning them.")
+            await ctx.send(
+                "Gotta tell me who you want to ban. " + "Try @ mentioning them."
+            )
             return
         if not duration:
             duration = "24h"
@@ -55,19 +58,36 @@ class Please(commands.Cog):
 
         author = ctx.author
         ban_role = guild.get_role(BAN_ROLES[guild_key])
-        unbannable_role = guild.get_role(UNBANNABLE_ROLES[guild_key]) if guild_key in UNBANNABLE_ROLES else None
+        unbannable_role = (
+            guild.get_role(UNBANNABLE_ROLES[guild_key])
+            if guild_key in UNBANNABLE_ROLES
+            else None
+        )
         if unbannable_role in author.roles:
             await ctx.send("{} cannot be banned.".format(author.display_name))
             return
         if ban_role in author.roles:
-            await ctx.send("{} is already banned, and they probably deserved it.".format(author.display_name))
+            await ctx.send(
+                "{} is already banned, and they probably deserved it.".format(
+                    author.display_name
+                )
+            )
             return
         await author.add_roles(ban_role)
-        await ctx.send("{} has been banned for {} hours".format(author.display_name, duration))
+        await ctx.send(
+            "{} has been banned for {} hours".format(author.display_name, duration)
+        )
         if duration > 24 * 30:
             return
         await asyncio.sleep(3600 * duration)
         await author.remove_roles(ban_role)
+
+    @is_in_guilds("gamescord")
+    @please.command(name="punish", hidden=True)
+    async def punish(self, ctx):
+        if ctx.author.id not in [276520565458862081, 448896411036024832]:
+            return
+        await ctx.send("(psst, don't say please for this)")
 
     @is_in_guilds("gamescord")
     @please.command(name="jailbreak", hidden=True)
