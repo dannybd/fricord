@@ -32,8 +32,6 @@ class DailyCensor(commands.Cog):
         channel = message.channel
         role = guild.get_role(THIN_ICE_ROLES[guild_key])
         if role in guild.me.roles:
-            await message.add_reaction("🙊")
-            await message.add_reaction("🐢")
             return
 
         if role in author.roles:
