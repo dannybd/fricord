@@ -12,6 +12,8 @@ INV_GUILDS = {v: k for k, v in GUILDS.items()}
 
 
 def get_guild_key(guild):
+    if not guild:
+        return None
     if guild.id not in INV_GUILDS:
         return None
     return INV_GUILDS[guild.id]

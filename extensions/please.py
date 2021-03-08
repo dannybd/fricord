@@ -99,6 +99,33 @@ class Please(commands.Cog):
         for member in role.members:
             await member.remove_roles(role)
 
+    # @is_in_guilds("fricord")
+    @please.command(name="recalibrate", hidden=True)
+    async def recalibrate(self, ctx, new_vibes: int, *, member: typing.Optional[discord.Member]):
+        """Sneakily recalibrate carl's vibecheck"""
+        try:
+            await ctx.message.delete()
+        except:
+            pass
+        vibes = {
+            3: "Most Excellent ⬆️⬆️⬆️",
+            2: "Excellent ⬆️⬆️",
+            1: "Quality ⬆️",
+            0: "Neutral ↔️",
+            -1: "Less Than Ideal ⬇️",
+            -2: "Far Less Than Ideal ⬇️⬇️",
+            -3: "Honestly Terrible ⬇️⬇️⬇️",
+        }
+        vibe = vibes.get(new_vibes)
+        if not vibe:
+            return
+        await ctx.send("Umm, dad? I don't think that's quite right.")
+        target = member or ctx.message.author
+        await ctx.send("{}'s vibes are: {}".format(
+            target.display_name,
+            vibe,
+        ))
+
 
 def setup(bot):
     cog = Please(bot)
