@@ -101,7 +101,9 @@ class Please(commands.Cog):
 
     # @is_in_guilds("fricord")
     @please.command(name="recalibrate", hidden=True)
-    async def recalibrate(self, ctx, new_vibes: int, *, member: typing.Optional[discord.Member]):
+    async def recalibrate(
+        self, ctx, new_vibes: int, *, member: typing.Optional[discord.Member]
+    ):
         """Sneakily recalibrate carl's vibecheck"""
         try:
             await ctx.message.delete()
@@ -121,10 +123,12 @@ class Please(commands.Cog):
             return
         await ctx.send("Umm, dad? I don't think that's quite right.")
         target = member or ctx.message.author
-        await ctx.send("{}'s vibes are: {}".format(
-            target.display_name,
-            vibe,
-        ))
+        await ctx.send(
+            "{}'s vibes are: {}".format(
+                target.display_name,
+                vibe,
+            )
+        )
 
 
 def setup(bot):
